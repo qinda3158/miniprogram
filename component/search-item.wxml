@@ -1,0 +1,7 @@
+<!--component/search-item.wxml-->
+<view class="search-item">
+	<text class="icon">%</text>
+	<block wx:for="{{newList}}" wx:key="index">
+		<text class="{{item.color}}">{{item.text}}</text>
+	</block>
+</view>

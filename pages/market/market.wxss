@@ -1,0 +1,511 @@
+/* pages/market/market.wxss */
+page {
+  padding-top: 100rpx;
+  background-color: #fbfcfb;
+}
+.search-block{
+  width: 100%;
+  height: 100rpx;
+  padding: 0 30rpx;
+  padding-top: 26rpx;
+  padding-bottom: 6rpx;
+  box-sizing: border-box;
+  background-color:#c14948;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  width: 544rpx;
+  height: 68rpx;
+  padding: 5rpx 10rpx 5rpx 60rpx;
+  font-size: 24rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.search .search-icon {
+  width: 24rpx;
+  height: 25rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.search .search-input {
+  height: 46rpx;
+  font-size: 28rpx;
+  color: #999999;
+  letter-spacing: 0.2rpx;
+  line-height: 46rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.classification {
+  width: 130rpx;
+  height: 68rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.classification .classification-icon {
+  width: 24rpx;
+  height: 21rpx;
+  line-height: 74rpx;
+  margin-right: 10rpx;
+}
+
+.classification .classification-icon image {
+  width: 24rpx;
+  height: 21rpx;
+  background-size: 100% 100% no-repeat;
+}
+
+.classification text {
+  height: 25rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 26rpx;
+  font-weight: normal;
+  color: #333333;
+  line-height: 68rpx;
+}
+.nav-m {
+  height: 278rpx;
+  padding-top: 22rpx;
+  box-sizing: border-box;
+  background-color: #c14948;
+  position: relative;
+}
+
+.banner {
+  width: 702rpx;
+  height: 180rpx;
+  background-color: #ffffff;
+  border-radius: 8rpx;
+  margin: 0 auto;
+}
+
+.nav-list {
+  width: 702rpx;
+  height: 340rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 218rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+.scroll-view {
+  width: 100%;
+  height: 300rpx;
+}
+
+.scroll-inner {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.first-page,
+.second-page {
+  width: 702rpx;
+  height: 300rpx;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 34rpx;
+  box-sizing: border-box;
+}
+
+.item-v {
+  width: 130rpx;
+  height: 100rpx;
+}
+
+.item-v .img {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  background-color: #fcf4;
+}
+
+.img image {
+  width: 100%;
+  height: 100%;
+}
+
+.item-v .tag-name {
+  height: 22rpx;
+  line-height: 22rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #3c475c;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.slider-outer {
+  width: 76rpx;
+  height: 8rpx;
+  background-color: #ececef;
+  border-radius: 4rpx;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 40rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background-color: #eb4f53;
+}
+
+/* 活动 */
+.activity-entry {
+  width: 702rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 296rpx;
+  margin-bottom: 20rpx;
+}
+
+.activity-entry>.left,
+.activity-entry>.right {
+  width: 346rpx;
+  height: 150rpx;
+  background-color: pink;
+  border-radius: 10rpx;
+}
+
+/* 导航区域 */
+.goods-nav {
+  height: 180rpx;
+  width: 702rpx;
+  margin: 0 auto;
+  padding-top: 30rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.goods-nav .title {
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 32rpx;
+  color: #222;
+  font-weight: 700;
+}
+
+.goods-nav .title text {
+  height: 22rpx;
+  font-size: 22rpx;
+  color: #b7b8bd;
+  line-height: 22rpx;
+  font-weight: 400;
+  margin-left: 20rpx;
+}
+
+.goods-tab {
+  width: 100%;
+  height: 44rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  text-align: center;
+  margin-top: 38rpx;
+}
+
+.goods-tab>view {
+  width: 310rpx;
+  height: 44rpx;
+  background-color: #f7f7f7;
+  border-radius: 8rpx;
+}
+
+.goods-tab>view.active {
+  background-color: #ffecec;
+  color: #eb4f53;
+}
+
+/* 商品区域 */
+.goods-list {
+  width: 702rpx;
+  padding-bottom: 16rpx;
+  margin: 0 auto;
+}
+
+.goods-item {
+  width: 702rpx;
+  padding-left: 24rpx;
+  padding-top: 40rpx;
+  padding-right: 24rpx;
+  height: 240rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-top: 1rpx solid #f4f5f9;
+}
+
+.goods-img {
+  width: 160rpx;
+  height: 160rpx;
+  flex-shrink: 0;
+}
+
+.goods-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-desc {
+  width: calc(100% - 160rpx);
+  height: 160rpx;
+  padding-left: 40rpx;
+  padding-right: 24rpx;
+  box-sizing: border-box;
+}
+
+.goods-title {
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 30rpx;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 22rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateX(-16rpx);
+}
+
+.goods-coupon {
+  height: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 38rpx;
+}
+
+.goods-coupon .coupon {
+  width: 202rpx;
+  height: 30rpx;
+  background-color: #ffffff;
+  border: solid 1rpx #eb4f53;
+  display: flex;
+  justify-content: flex-start;
+  color: #eb4f53;
+  font-size: 20rpx;
+  text-align: center;
+}
+
+.goods-coupon .coupon .left {
+  width: 78rpx;
+  height: 100%;
+  background-color: #ffecec;
+  flex-shrink: 0;
+}
+
+.goods-coupon .coupon .right {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-price {
+  height: 26rpx;
+  line-height: 26rpx;
+  font-size: 32rpx;
+  color: #eb4f53;
+}
+
+.goods-price text {
+  font-size: 24rpx;
+  color: #b7b8bd;
+}
+
+.goods-price .rmb {
+  font-size: 20rpx;
+  color: #eb4f53;
+  line-height: 24rpx;
+}
+
+/* 导航列表 */
+.nav-list-b {
+  width: 100%;
+  height: 158rpx;
+
+}
+
+.nav-outer {
+  padding-left: 42rpx;
+  padding-top: 52rpx;
+  display: flex;
+  justify-content: flex-start;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.nav-item {
+  width: 120rpx;
+  height: 80rpx;
+  text-align: center;
+  margin-right: 32rpx;
+}
+
+.nav-outer .nav-item:last-child {
+  padding-right: 42rpx;
+}
+
+.nav-title {
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #222;
+  margin-bottom: 14rpx;
+  font-weight: 700;
+}
+
+.nav-desc {
+  height: 34rpx;
+  font-size: 20rpx;
+  line-height: 34rpx;
+  color: #999;
+  border-radius: 8rpx;
+}
+
+.nav-title.active {
+  color: #eb4f53;
+}
+
+.nav-desc.active {
+  color: #fff;
+  background-color: #eb4f53;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.product-list{
+  padding-left:24rpx;
+  padding-right: 24rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.product-item {
+  width: 344rpx;
+  height: 610rpx;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  margin-bottom: 14rpx;
+}
+
+.product-img {
+  width: 344rpx;
+  height: 344rpx;
+  background-color: #f4f5f9;
+}
+
+.product-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.product-bottom {
+  padding-top: 30rpx;
+  padding-left: 22rpx;
+  padding-right: 22rpx;
+  box-sizing: border-box;
+}
+
+.product-title {
+  height: 68rpx;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  letter-spacing: 0.3rpx;
+  color: #222222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  background-color: pink;
+}
+
+.product-tag {
+  height: 28rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 28rpx;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 22rpx;
+  margin-bottom: 34rpx;
+}
+
+.product-tag .sec-kill {
+  width: 48rpx;
+  height: 28rpx;
+  background-color: #eb4f53;
+  border-radius: 4rpx;
+  color: #fff;
+  color: #fff;
+  margin-right: 6rpx;
+}
+
+.product-tag .coupon {
+  width: 34rpx;
+  height: 28rpx;
+  background-color: #ffffff;
+  border-radius: 4rpx;
+  border: solid 1rpx #eb4f53;
+  color: #eb4f53;
+  box-sizing: border-box;
+}
+.product-price{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 36rpx;
+  color: #eb4f53;
+
+}
+.product-price .rmb{
+  font-size: 24rpx;
+}
+.zan{
+  height: 24rpx;
+  line-height: 24rpx;
+  background-color: pink;
+  margin-top: 6rpx;
+  text-align: right;
+  font-size: 22rpx;
+  color: #999;
+}
+.zan-icon{
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}

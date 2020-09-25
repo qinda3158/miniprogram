@@ -1,0 +1,112 @@
+<!--pages/market/market.wxml-->
+<view class="search-block">
+	<view class="search" bindtap="navToSearch">
+		<image src="{{imgList['search-icon']}}" class="search-icon"></image>
+		<view class="search-input">搜索项目/案例/专家</view>
+	</view>
+	<view class="classification" bindtap="navToMarket">
+		<view class="classification-icon">
+			<image src="{{imgList['class-icon']}}" mode="widthFix" />
+		</view>
+		<text>分类</text>
+	</view>
+</view>
+<view class="nav-m">
+	<view class="banner">
+		<image src=""></image>
+	</view>
+	<view class="nav-list">
+		<scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" bindscrolltoupper="upper" bindscrolltolower="lower">
+			<view class="scroll-inner">
+				<view class="first-page">
+					<block wx:for="{{list}}" wx:key="index">
+						<view class="item-v">
+							<view class="img">
+								<image src=""></image>
+							</view>
+							<view class="tag-name">标题</view>
+						</view>
+					</block>
+				</view>
+				<view class="second-page">
+					<block wx:for="{{list}}" wx:key="index">
+						<view class="item-v">
+							<view class="img">
+								<image src=""></image>
+							</view>
+							<view class="tag-name">标题</view>
+						</view>
+					</block>
+				</view>
+			</view>
+		</scroll-view>
+		<view class="slider-outer">
+			<view class="slider" style="transform:translateX({{move}}rpx)"></view>
+		</view>
+	</view>
+</view>
+<view class="activity-entry">
+	<view class="left"></view>
+	<view class="right"></view>
+</view>
+<!-- 导航栏 -->
+<view class="goods-nav">
+	<view class="title">艺星榜单<text>大家都在买的商品</text>
+	</view>
+	<view class='goods-tab'>
+		<view class="sell active">销量优先</view>
+		<view class="good-opinion">好评优先</view>
+	</view>
+</view>
+<!-- 商品列表 -->
+<view class="goods-list">
+	<block wx:for="{{3}}" wx:key="index">
+		<view class="goods-item">
+			<view class="goods-img">
+				<image></image>
+			</view>
+			<view class="goods-desc">
+				<view class="goods-title">【激光去痣】超皮秒/祛雀斑皮hiiouo;kj;ool</view>
+				<view class="goods-coupon">
+					<view class="coupon">
+						<view class="left">预约金</view>
+						<view class="right">满100减10</view>
+					</view>
+				</view>
+				<view class="goods-price"><text class="rmb">￥</text>1800 <text>￥2400</text></view>
+			</view>
+		</view>
+	</block>
+</view>
+<!-- 底部商品案例 -->
+<view class="nav-list-b">
+	<view class="nav-outer">
+		<block wx:for="{{10}}" wx:key="index">
+			<view class="nav-item">
+				<view class="nav-title active">眼部</view>
+				<view class="nav-desc active">自然持久</view>
+			</view>
+		</block>
+	</view>
+</view>
+<view class="product-list">
+	<block wx:for="{{5}}" wx:key="index">
+		<view class="product-item">
+			<view class="product-img">
+				<image src=""></image>
+			</view>
+			<view class="product-bottom">
+				<view class="product-title">【足量瘦脸】100u点注射咬肌/提升紧致皮肤美容
+				</view>
+				<view class="product-tag">
+					<view class="sec-kill">秒杀</view>
+					<view class="coupon">券</view>
+				</view>
+				<view class="product-price"><text class="rmb">￥</text>1800</view>
+				<view class="zan">
+					<image class="zan-icon"></image> 640
+				</view>
+			</view>
+		</view>
+	</block>
+</view>

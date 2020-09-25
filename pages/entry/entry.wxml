@@ -1,0 +1,4 @@
+<!--pages/entry/entry.wxml-->
+<text>pages/entry/entry.wxml</text>
+<button bindtap="navToPlay">播放</button>
+<button bindtap="navToPush">推流</button>

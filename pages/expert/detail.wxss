@@ -1,0 +1,123 @@
+/* pages/expert/detail.wxss */
+page {
+  background-color: #fafbfc;
+}
+
+.top {
+  width: 750rpx;
+  height: 535rpx;
+  background: url('https://img.yixingwx.com/expert/top-bg.png') center no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+.navBack {
+  background-color: pink;
+  font-size: 32rpx;
+  text-align: left
+}
+
+.avatar {
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 50%;
+  /* background-color: pink; */
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+
+.top .name {
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-top: 12rpx;
+  margin-bottom: 12rpx;
+}
+
+.office,
+.work-year {
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.work-year {
+  margin-top: 28rpx;
+  margin-bottom: 52rpx;
+}
+
+.expert-desc {
+  width: 640rpx;
+  height: 56rpx;
+  /* background-color: pink; */
+  margin: 0 auto;
+  font-size: 22rpx;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 导航栏 */
+.tab-list {
+  height: 140rpx;
+  background-color: #fff;
+  display: flex;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+}
+
+.tab-list .item {
+  display: inline-block;
+  height: 100%;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.item .num {
+  height: 38rpx;
+  font-size: 38rpx;
+  line-height: 38rpx;
+  color: #252737;
+}
+
+.item .text {
+  height: 24rpx;
+  font-size: 24rpx;
+  lighting-color: 24rpx;
+  color: #999;
+  margin-top: 24rpx;
+}
+.item .img{
+  width: 52rpx;
+  height: 52rpx;
+  background-color: pink;
+  margin: 0 auto;
+}
+.item .img>image{
+  width: 100%;
+  height: 100%;
+}
+.padding-60{
+  padding: 0 60rpx;
+  height: 194rpx;
+  margin-top: 20rpx;
+}
+.item .desc{
+  height: 28rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #252737;
+  margin-top: 26rpx;
+}

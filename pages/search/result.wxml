@@ -1,0 +1,17 @@
+<!--pages/search/result.wxml-->
+<view class="expert-list">
+	<view class="expert-item">
+		<view class="expert-img">
+			<image src=""></image>
+		</view>
+		<view class="expert-info">
+			<view class="expert-name">杨丽花</view>
+			<view class="expert-desc">
+				<text class="h">好评率:</text><text class="l">100%</text> | 从业10年 | 就诊量: 864
+			</view>
+			<view class="expert-position">杭州艺星皮肤科主任医师</view>
+		</view>
+	</view>
+</view>
+<search-item title="{{str}}" keyWords="{{value}}">
+</search-item>

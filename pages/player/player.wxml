@@ -1,0 +1,2 @@
+<!--pages/player/player.wxml-->
+<live-player src="http://sanyanvshen3158.xyz/live/steam_putong.flv" mode="live" autoplay style="width: 300px; height: 225px;" />

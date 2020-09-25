@@ -1,0 +1,77 @@
+<!--pages/expert/index.wxml-->
+<view class="search">
+	<text class="iconfont icon-search"></text>请输入专家姓名
+</view>
+<swiper class="swiper" autoplay="{{false}}" previous-margin="25" next-margin="25" circular="true" bindchange="swiperChange">
+	<block wx:for="{{3}}" wx:key="index">
+		<swiper-item class="swiper-item">
+			<view class="item-info {{index==currentIndex? 'active':''}}">{{index}}</view>
+		</swiper-item>
+	</block>
+</swiper>
+<view class="dots">
+	<block wx:for="{{3}}" wx:key="index">
+		<view class="dot {{index==currentIndex? 'active':''}}"></view>
+	</block>
+</view>
+<view class="expert-bg">
+	<view class="expert-nav">
+		<view class="expert-t">艺星专家
+			<text>描述描述描述</text>
+		</view>
+		<view class="top-img">
+			<image src=""></image>
+		</view>
+		<view class="img-outer">
+			<view class="item-img" wx:for="{{3}}" wx:key="index">
+				<image src=""></image>
+			</view>
+		</view>
+	</view>
+	<!-- 排行榜 -->
+	<view class="tabList fff auto">
+		<block wx:for="{{list}}" wx:key="index">
+			<view class="tabItem {{currentIdx==index? 'active':''}}" data-id="{{index}}" bindtap="changeTab">
+				{{item}}
+			</view>
+		</block>
+	</view>
+	<view class="slider-bg auto">
+		<view class="slider" style="transform:translateX({{160*currentIdx}}rpx);transition:ease-out 200ms"></view>
+	</view>
+	<view class="top-item fff auto">
+		<view class="tag">
+		</view>
+		<!-- 头像 -->
+		<view class="synopsis">
+			<view class="left">
+				<view class="expert-name pad-28">陈艳<text class="office">整形外科</text>
+					<text class="year">从业20年</text>
+				</view>
+				<view class="position pad-28">杭州艺星皮肤科主任医师</view>
+				<view class="tags pad-28">
+					<text class="tag-item"><text class="iconfont icon-xingxing"></text> 面部填充</text>
+				</view>
+			</view>
+			<view class="right">
+				<image src=""></image>
+			</view>
+		</view>
+		<!-- 商品区域 -->
+		<view class="products">
+			<block wx:for="{{3}}" wx:key="index">
+				<view class="product-item">
+					<view class="product-img">
+						<image src=""></image>
+					</view>
+					<view class="product-name">激光去痣超皮秒hi哦看见了;kjijhioh</view>
+					<view class="product-price">
+						<text>星粉专享价:</text>
+						￥1800</view>
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 尾部 -->
+	<view class="foot">你,  让世界更美</view>
+</view>

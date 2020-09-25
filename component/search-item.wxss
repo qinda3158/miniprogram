@@ -1,0 +1,19 @@
+/* component/search-item.wxss */
+/* 搜素结果 */
+.search-item {
+  height: 90rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #222;
+  border-bottom: 1rpx solid #f4f5f9;
+}
+
+.red {
+  color: #eb4f53;
+}
+
+.icon {
+  margin-right: 4rpx;
+}

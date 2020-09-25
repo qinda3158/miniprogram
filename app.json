@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "pages/search/result",
+    "pages/market/market",
+    "pages/expert/index",
+    "pages/expert/detail",
+    "pages/entry/entry",
+    "pages/player/player",
+    "pages/publish/publish",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

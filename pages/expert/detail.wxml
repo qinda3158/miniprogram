@@ -1,0 +1,31 @@
+<!--pages/expert/detail.wxml-->
+<view class="top">
+	<view class="navBack" style="width:30px;height:{{menuHeight}}px;line-height:{{menuHeight}}px;position:fixed;top:{{menuTop}}px;left:30rpx">{{'<'}}</view>
+	<view class="avatar">
+		<image src=""></image>
+	</view>
+	<view class="name">程燕</view>
+	<view class="office">微整科 | 主任医师</view>
+	<view class="work-year">从业20年</view>
+	<view class="expert-desc">
+		擅长内窥镜双平面隆胸、乳房下垂、乳头缩小、乳房内陷矫正术，面部年轻化整形美容、胸部整形擅长内窥镜双平面隆胸、乳房下垂、乳头缩小、乳房内陷矫正术，面部年轻化整形美容、胸部整形
+	</view>
+</view>
+<view class="tab-list">
+	<block wx:for="{{list}}" wx:key="index">
+		<view class="item">
+			<view class="num">{{item.num}}</view>
+			<view class="text">{{item.text}}</view>
+		</view>
+	</block>
+</view>
+<view class="tab-list padding-60">
+	<block wx:for="{{3}}" wx:key="index">
+		<view class="item">
+			<view class="img">
+				<image src=""></image>
+			</view>
+			<view class="desc">咨询助理</view>
+		</view>
+	</block>
+</view>
