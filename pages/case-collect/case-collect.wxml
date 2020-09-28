@@ -1,0 +1,39 @@
+<!--pages/case-collect/case-collect.wxml-->
+<view class="top-bg"></view>
+<view class="bottom-bg">
+  <view class="mid-img">
+    <image src="http://img.yixingwx.com/case-collect/2.png"></image>
+  </view>
+  <view class="bottom-img">
+    <image src="http://img.yixingwx.com/case-collect/3.png"></image>
+  </view>
+  <view class="bottom-tip">
+    你,让世界更美
+  </view>
+</view>
+<view class="sigup-btn">
+<view class="btn-info">立即报名</view>
+</view>
+<!-- 弹窗 -->
+<view class="outer">
+ <view class="form">
+    <view class="title">
+   "Yestar星代颜甄选秀"
+    </view>
+    <view class="form-info">
+      <view class="item">
+        <view class="left">姓名:</view>
+        <view class="right">
+          <input class="ipt" placeholder="请输入姓名" bindinput="nameValue"></input>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">电话:</view>
+        <view class="right">
+          <input class="ipt" placeholder="请输入电话" bindinput="phoneValue"></input>
+        </view>
+      </view>
+    </view>
+    <view class="submit  {{isSubmit?'grey':''}}" bindtap="submit">点击提交</view>
+  </view>
+</view>

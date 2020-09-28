@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/case-collect/case-collect",
     "pages/search/result",
     "pages/market/market",
     "pages/expert/index",

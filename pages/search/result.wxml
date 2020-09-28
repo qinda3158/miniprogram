@@ -13,5 +13,36 @@
 		</view>
 	</view>
 </view>
+<!-- 搜素item -->
 <search-item title="{{str}}" keyWords="{{value}}">
 </search-item>
+<!-- 案例item -->
+<view class="case-item">
+  <view class="user">
+	 <view class='user-img'>
+	   <image src=""></image>
+	 </view>
+	 <view class="user-name">shuyuer</view>
+	</view>
+	<!-- 案例图片 -->
+	<view class="case-img">
+	  <view class="img-after">
+		  <image src=""></image>
+			<view class="after">after</view>
+		</view>
+		<view class="img-before">
+		  <image src=""></image>
+			<view class="before">before</view>
+		</view>
+	</view>
+	<!-- 案例描述 -->
+	<view class="case-desc">
+	世界上最远的距离不是生与死的距离不是天各一方,而是我就在你面前你却不知道我爱你
+	</view>
+	 <!-- 项目名字 -->
+	 <view class="case-item-name">#眼综合</view>
+</view>
+<!-- 问答条目 -->
+<view class="anser-outer">
+<view class="title">想要点痣最好的方法是什么固定营销位？</view>
+</view>
