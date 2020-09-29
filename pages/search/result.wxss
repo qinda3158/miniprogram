@@ -65,50 +65,58 @@
 }
 
 /* 案例条目 */
-.case-item{
+.case-item {
   width: 692rpx;
   height: 592rpx;
   box-sizing: border-box;
   background-color: pink;
   margin: 0 auto;
 }
-.user{
+
+.user {
   height: 58rpx;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30rpx;
 }
-.user-img{
+
+.user-img {
   width: 58rpx;
   height: 58rpx;
   border-radius: 50%;
   overflow: hidden;
 }
-.user-img image{
+
+.user-img image {
   width: 100%;
   height: 100%;
 }
-.case-img{
-   display: flex;
-   justify-content: center;
-   align-items: center; 
-   margin-bottom: 30rpx;
-   border-radius: 12rpx;
-   overflow: hidden;
+
+.case-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
 }
-.img-before,.img-after{
+
+.img-before,
+.img-after {
   width: 342rpx;
   height: 342rpx;
   /* background-color: cyan; */
   position: relative;
 }
 
-.img-before image,.img-after image{
+.img-before image,
+.img-after image {
   width: 100%;
   height: 100%;
 }
-.case-desc{
+
+.case-desc {
   height: 74rpx;
   /* background-color: cyan; */
   font-size: 28rpx;
@@ -116,22 +124,242 @@
   line-height: 40rpx;
   margin-bottom: 30rpx;
 }
-.case-item-name{
-  height:28rpx;
+
+.case-item-name {
+  height: 28rpx;
   font-size: 28rpx;
   line-height: 28rpx;
   color: #999;
 }
-.before,.after{
+
+.before,
+.after {
   height: 40rpx;
   display: inline-block;
   line-height: 40rpx;
-  padding:0 16rpx;
+  padding: 0 16rpx;
   border-radius: 20rpx;
   font-size: 20rpx;
   color: #fff;
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0, 0, 0, .2);
   position: absolute;
   bottom: 16rpx;
   left: 20rpx;
+}
+
+/* 问答 */
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot?t=1601347024501');
+  /* IE9 */
+  src: url('iconfont.eot?t=1601347024501#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQ4AAsAAAAACFAAAAPqAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqEDINTATYCJAMQCwoABCAFhG0HRRtCBxEVnP/IvsC2YY8Co6kYrVWo5O7ooIdhJJBAAgUAAAAABBHZ/Vc907tvFt860JkjCxGUUkECM72rNQ2RSlTdCvUkowpoA6Se9h54f8u6imyFBVY1olPV2ApZGZ35xr13nx7kSCcIVWyi2t6idBjR99aXdZjQCfoM/j/X1EvxW3w7m1NUcebzo70BziJ1QBFtBdq6CeOGsQta4nYIEFJMDaTDflgkaKCY/QSQsV5OGmhkjGhDuuAQ/IqpimzEw5lV5rQAG4Lfy+dCPeGBwbOYQ7sN988Em+/Mfy7LC/8vpK+HIJrODrBZYIEagIKMrHQOphwFamAJ1dYVGgEOh4Gp6op+LtdrJD6K0ll/eSBYDIiPmRoD0AAp7IWJHBoC79Gw8H4jBuLa2wEBcAB4DcjCsxsUW9xNjUVB2YZWiN6tgIVbBWg50t06o1H9Pm2v2QbYtk1jxI5FhffpNH3yDg2JGsHe7QLBveUleZ+g11F31t23Mf2Y9g29RyYtYjAeI7QYzg/5+DMIGe3eqrtpuqq9LNm5a1Q7rIqazmrtGtHcizT7DwXxoUvadui4RbR3n/5uNR7RvIMOGeI1hzX2UJ2+RfPQ5X4MDh6LDBlR48/G0OKh/5oPfkmtM3HzpbMpPeQtn90+YKPjkPyy0+7bDtXrEK8dshl0csoEaFwtqTb9yFp2JTunZrAwCw1o9bLFb5M/fxBOCPdIpOvYyZEnMvj4pL6/O9fyeecxp9Xst62NkDWf3Wrum5amKS+JGkMvSz+OdmVFKsSxUV6/ev0u9fBd1afS5Xbv1nl5WbVG5p/6s9xkRo3r9UcOBjdrjZ1V/X9hj+tu3ibp+ZkiKsN6bceFW7aLXY+WV70W7zC6zmV5i56Vkh5XtzFoQ4q5k11k1gDsH/NdAOyQ0sHf7saePdQpJcVt5dpPm/e4/cvAqHQX/jKRKvq3oo4ZqklMk6oidYS6S2mV6ocBQkLgj0YgnWdTqLM6p4LgyErAkKAILI4KqJI1wCOiAfg4WkNIdS0HsyMyIMqIBkA1rgAIqbyDIZnLYEnlB1XyDzyy+QefVClDSHfpLRlRSbzWDqHBaIN5Dp6VxMK2cCtMH6BzHBqUlgTUBCn33KBKSj58gDHSFCPyE0djFiAoiWAf7IZhmEBKiY8WSy5z2pdlUXUjyUqiQov2EIgBg9gAJucAHhYJMcLLzbQK3x+AOBwTYkANjCrvBITI8RoHVCSUDuiBMu7EuJXWOSc4aDCMwL0EREIEsA/tSGgFEoC0upMPYsFIuAN8KX1klE10VUrLq6M3XAKEmCuqGLGi4uGGY3zmGbFTC70Hssd1OyW7sA2FAgAA') format('woff2'),
+    url('iconfont.woff?t=1601347024501') format('woff'),
+    url('iconfont.ttf?t=1601347024501') format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1601347024501#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fenxiang:before {
+  content: "\e626";
+}
+
+.icon-liulan:before {
+  content: "\e7d0";
+}
+
+.icon-dianzan:before {
+  content: "\e775";
+}
+
+
+.anser-outer {
+  width: 690rpx;
+  height: 370rpx;
+  background-color: pink;
+  margin: 0 auto;
+}
+
+.anser-outer .title {
+  height: 32rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #222;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doctor {
+  height: 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 32rpx;
+  margin-bottom: 56rpx;
+}
+
+.doctor .user-img {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16rpx;
+}
+
+.doctor .user-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.point {
+  width: 2rpx;
+  height: 2rpx;
+  border-radius: 1rpx;
+  background-color: #999;
+  margin: 0 20rpx;
+}
+
+.doctor-name {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.answer {
+  width: 650rpx;
+  height: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  /* background-color: cyan; */
+  margin: 0 auto;
+  font-size: 26rpx;
+  color: #333;
+  line-height: 42rpx;
+  margin-bottom: 64rpx;
+}
+
+.bottom-num {
+  height: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22rpx;
+  color: #666;
+}
+
+.bottom-num .iconfont {
+  font-size: 36rpx;
+  vertical-align: middle;
+}
+
+/* 热销榜 */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1601349793899'); /* IE9 */
+  src: url('iconfont.eot?t=1601349793899#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALoAAsAAAAABqAAAAKcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBKIEtATYCJAMICwYABCAFhG0HMxvWBciemjyBRNMQApLS08EADBHE70ebff+duTTxJFqvOdAoQSwUQoRQSYEuGuoNzbUb7vEwe4uoJ5XJ3X5se7k/xDWJJdGER41ECQkamV64Cb3WgJi0/3zi3un/DaBA5jvvctyL1hjUBRgHUqB7YBs4kBLKuGHsghd4mkClXgmY3byScuAisycF4pkkssCl4JZlFisXShtWZvGRo/L0Kr0BPkTfjz8M4UJSUrALTm5yBZDxPSfBfuAJ9QHBAwS0vgQFpgGZuGgMH7EXjGGvMuxgEDhWbvC9/wOTOKpesL/Ozq4G3VDwTEJP9Ki8CWT6swTYmXQ3ipynulfdgzvWmaDOqYAVprx2LWpqv7m6ci1oZcVAZQ2z+Xkke8frj7f56LRrJbAuaHBt/aIfMGmx2Q4w3x/njgHz5dP7nmPo5nY4E3K1e9a8/UvE2p5j5EK+Dp5uNjzZanlozluMdLBf2wbu/2WgnxXv0zcGwcsXN6fX3il/5WTwzeciXTbMCpSfyhL8MuHAtmyIbWPKmrAxniyxv5WaSpV4gu2NvqZqWu4vHsq13KW1TE+GQrlhMtOnUaLKMkqV20ClKfnrqzQh7EWuwKRRgFDvFEmtryjUeycz/RMlWv2gVH3Yo9JV+O9YZTQkt2yCWIoEyHVCiTebsGumbnFuKRJbFZbkxRGzEhGb5IN6ja4cy0cmRJaYY2sTDZRiiIlZhXngPKQoZmgh5hbEU42RUkuSVoubXqThzSpws4NAWBQigDidIAnPzAQH3Sm3yudLIaJWChbpaKnzV0IIG2lwSE9DN4DMV5gGtTzKJTZtRAYUhUEYYaaC8sAwRKEwgyzNw1ogPErDOCFokUTrdMJDFZrtVerf7YFKtjaFU1youGtlTaLo6wEA') format('woff2'),
+  url('iconfont.woff?t=1601349793899') format('woff'),
+  url('iconfont.ttf?t=1601349793899') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1601349793899#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-huangguan:before {
+  content: "\e6b4";
+}
+
+.hot-band {
+  height: 30rpx;
+  padding-left: 30rpx;
+  line-height: 30rpx;
+  color: #222;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 30rpx;
+}
+
+.hot-good-item {
+  width: 662rpx;
+  height: 140rpx;
+  padding-left: 36rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40rpx;
+}
+.band-num{
+  padding-top: 40rpx;
+  color: #eb4f53;
+  font-size: 36rpx;
+
+}
+.icon-guan{
+  height: 14rpx;
+  line-height: 18rpx;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.band-num .num{
+  height: 28rpx;
+  line-height: 28rpx;
+  font-weight: 700;
+}
+.hot-good-item .good-img {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 0 40rpx;
+  flex-shrink: 0;
+  background-color: pink;
+}
+
+.hot-good-item .good-img image {
+  width: 100%;
+  height: 100%;
+}
+.goods-desc{
+padding-top: 22rpx;
+}
+.goods-title {
+  width: 386rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateX(-14rpx);
+}
+
+.goods-sell-num {
+  height: 26rpx;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  color: #999;
 }

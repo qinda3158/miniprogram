@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/case-collect/case-collect",
     "pages/search/result",
     "pages/market/market",
     "pages/expert/index",
@@ -8,6 +7,7 @@
     "pages/entry/entry",
     "pages/player/player",
     "pages/publish/publish",
+    "pages/case-collect/case-collect",
     "pages/index/index",
     "pages/logs/logs"
   ],
