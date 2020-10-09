@@ -83,6 +83,13 @@
 					"id": -1,
 					"name": "pages/expert/detail",
 					"pathName": "pages/expert/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/result",
+					"pathName": "pages/search/result",
 					"scene": null
 				}
 			]

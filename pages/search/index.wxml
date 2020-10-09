@@ -1,0 +1,52 @@
+<!--pages/search/index.wxml-->
+<view class="search-outer">
+<view class="search">
+  <input placeholder="试试搜 商品/项目/案例" name="search" confirm-type="search" bindconfirm="toSearchList"></input>
+  <image class="input-icon" src="http://img.yixingwx.com/live/search.png"></image>
+  <view class="cancel-input" bindtap="cancelInput">×</view>
+</view>
+  <view class="cancel-btn">取消</view>
+</view>
+<!-- 历史搜索 -->
+  <view class="title">
+    <view class="search-l">历史搜索</view>
+    <image class="del-icon" src="http://img.yixingwx.com/live/del.png" bindtap="showClose"></image>
+  </view>
+  <!-- 搜索列表 -->
+  <view class="history-s">
+    <block wx:for="{{search_history}}">
+      <view class="search-item-outer">
+        <view class='search-item' data-item="{{item}}" bindtap="toSearchListHistory">{{item}}
+          <view class="close" wx:if="{{isShowClose}}" data-idx="{{index}}" catchtap="delSearch">×</view>
+        </view>
+      </view>
+    </block>
+  </view>
+<!-- 搜索推荐 -->
+  <view class="title">
+    <view class="search-l">大家都在看</view>
+    <view class="search-r" bindtap="changeRecommend">
+      换一换
+      <image class="fresh-icon" src="http://img.yixingwx.com/live/fresh.png"></image>
+    </view>
+  </view>
+  <view class="hot-see">
+    <block wx:for="{{hot_list}}" wx:key="index">
+      <view class='hot-item' data-item="{{item}}" bindtap="toSearchListHistory">{{item}}</view>
+    </block>
+  </view>
+  <!-- 热销榜 -->
+<view class="hot-band">热销榜</view>
+<view class="hot-good-item">
+	<view class="band-num">
+		<view class="icon-guan iconfont icon-huangguan"></view>
+		<view class="num">1</view>
+	</view>
+	<view class="good-img">
+		<image src=""></image>
+	</view>
+	<view class="goods-desc">
+		<view class="goods-title">【激光去痣】超皮秒/祛雀斑【激光去痣】超皮秒/祛雀斑</view>
+		<view class="goods-sell-num">销量 74218</view>
+	</view>
+</view>

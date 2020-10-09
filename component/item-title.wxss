@@ -1,0 +1,59 @@
+/* component/item-title.wxss */
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot?t=1589420113599'); /* IE9 */
+  src: url('iconfont.eot?t=1589420113599#iefix') format('embedded-opentype'),
+         /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALEAAsAAAAABpQAAAJ4AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgpwfQE2AiQDDAsIAAQgBYRtB0EbzgXILiEnG1cEQmhRgSBwu7qXvM0o+LQkHv5/v1/73Hv/Q6VBEo109cQikUSzeCZBbJTO6jIzefK7mstNEYU5H/p/WWAO7CV8mcum4NgZQAvCga1qhWtv3FxN66ivYGEdeEhdLZ1uxLMWQNrnuaZeAh1I7QPNJSIsop9HAk5wYJ04Gk10E5mYbxi74AXeJ9BqmEZZnphbgwaFvSwQ14FnQUMhqiis0CxUDXuL+FCrOb2lT+A9+n78U4kGkkZmr90/HXdh6Ntv+bw+txcQYiDAww1kzACFOGrMHqoWjKvWaq7prqwUIS2VqGsitWGsnD88kiAqdn07mEC5xHeeOrOA2qeuz6BKagaBMba9f+oboyuqs58+7zvGjwZOb1Ej55vobnS9/v5b4xvq7uLerjY+9eKNUgFOXldWtrfvoSKYDEcAtdyWd6PfnckGBcHTzfd29f1vaCvg6wCRWoHhNZolmOYvaQb2FUNne3LR1J7a8mfdEzMJrUZAnR3s9TfdPnAn+dBsIEPSZAhZsxGysDNoaDOLSrM5tJo2ebhNH6lalBZMuQEI3Z6QdPpE1u2LLOwvGgb9o9Id1Wh1EN1nthmLoGlUokXoMvuMBY5IueujprhxBb0itmReF/EbKPMgwcpGqVyYxBTlEhvyY69CxBmXImET4DGMY8EyKUJ0yPCJsh7T5E0vMhyRQJMlErIQ5GJsZ5iAQ0jxYDRpqnx+BfIUYhbZ0VSX34CkXDA+U2YoDSAnzemgpkd5JnfMU0EIx3CSkGAmwCwUiwlM1jwrhBzE4E9IZ3qYzjA+1Gxsb01+oIq1YZ+XI0WOovWhEGFgpSSKpjNPm7oAAAAA') format('woff2'),
+         url('iconfont.woff?t=1589420113599') format('woff'),
+         url('iconfont.ttf?t=1589420113599') format('truetype'),
+         /* chrome,
+         firefox,
+         opera,
+         Safari,
+         Android,
+         iOS 4.2+ */ url('iconfont.svg?t=1589420113599#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zuojiantou:before {
+  content: "\e64e";
+}
+
+.icon-youjiantou:before {
+  content: "\e637";
+}
+.title1 {
+  height: 116rpx;
+  line-height: 116rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.title-left {
+  font-weight: 700;
+}
+
+.title-right {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.icon-youjiantou {
+  /* margin-left: 20rpx; */
+  font-size: 18rpx;
+  color: #999;
+}

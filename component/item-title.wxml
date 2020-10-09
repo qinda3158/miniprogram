@@ -1,0 +1,6 @@
+<!--component/item-title.wxml-->
+<!-- 商品列表 -->
+<view class="title1">
+	<text class="title-left">商品</text>
+	<text class="title-right" bindtap="toLookBackList">查看全部<text class="iconfont icon-youjiantou"></text></text>
+</view>
