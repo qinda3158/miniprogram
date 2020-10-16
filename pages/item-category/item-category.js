@@ -1,42 +1,52 @@
-// pages/search/result.js
+// pages/item-category/item-category.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabList:['综合','商品','专家','问答','案例'],
     currentIndex:0,
-    searchValue:'',
-    newlist: [],
-    titleProduct:'商品',
-    titleExpert:'专家',
-    titleQuestion:'问答',
-    titleRecommend:'相关推荐'
+    list:[
+      {
+        title:'皮肤管理',
+        lower:[
+          {name:'光子嫩肤'},
+          {name:'皮秒'},
+          {name:'超皮秒'},
+          {name:'朝批'},
+          {name:'哈哈'},
+        ]
+      },
+      {
+        title:'玻尿酸',
+        lower:[
+          {name:'光子嫩肤'},
+          {name:'皮秒'},
+          {name:'超皮秒'},
+          {name:'朝批'},
+          {name:'哈哈'},
+        ]
+      },
+      {
+        title:'其他',
+        lower:[
+          {name:'光子嫩肤'},
+          {name:'皮秒'},
+          {name:'超皮秒'},
+          {name:'朝批'},
+          {name:'哈哈'},
+        ]
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+
   },
-  changeTab(e){
-    this.setData({
-      currentIndex: e.target.dataset.idx
-    })
-  },
-  searchInput(e){
-   console.log('jj',e.detail.value)
-   this.setData({
-     searchValue:e.detail.value
-   })
-  },
-  cancelInput(){
-   this.setData({
-    searchValue:''
-   })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

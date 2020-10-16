@@ -1,6 +1,6 @@
 <!--component/search-item.wxml-->
 <view class="search-item">
-	<text class="icon">%</text>
+	<image class="input-icon" src="http://img.yixingwx.com/home/search-icon.png"></image>
 	<block wx:for="{{newList}}" wx:key="index">
 		<text class="{{item.color}}">{{item.text}}</text>
 	</block>

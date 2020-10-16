@@ -1,108 +1,139 @@
 <!--pages/search/result.wxml-->
 <view class="search-outer">
 	<view class="search">
-		<input placeholder="试试搜 商品/项目/案例" name="search" confirm-type="search" bindconfirm="toSearchList"></input>
-		<image class="input-icon" src="http://img.yixingwx.com/live/search.png"></image>
-		<view class="cancel-input" bindtap="cancelInput">×</view>
+		<input placeholder="试试搜 商品/项目/案例" name="search" value="{{searchValue}}" confirm-type="search" bindinput="searchInput" bindconfirm="toSearchList"></input>
+		<image class="input-icon" src="http://img.yixingwx.com/home/search-icon.png"></image>
+		<view wx:if="{{searchValue!=''}}" class="cancel-input" bindtap="cancelInput">×</view>
 	</view>
 	<view class="cancel-btn">取消</view>
 </view>
 <view class="tab-list">
-	<block wx:for="{{5}}" wx:key="index">
-		<view class="tab-item active">问答</view>
+	<block wx:for="{{tabList}}" wx:key="index">
+		<view class="tab-item {{currentIndex==index?'active':''}}" data-idx="{{index}}" bindtap="changeTab">{{item}}</view>
 	</block>
 </view>
 <!-- 商品列表 -->
-<item-title>
+<item-title wx:if="{{currentIndex==0}}" titleLeft="{{titleProduct}}">
 </item-title>
-<!-- 商品列表 -->
-<view class="goods-list">
-	<block wx:for="{{3}}" wx:key="index">
-		<view class="goods-item">
-			<view class="goods-img">
-				<image></image>
-			</view>
-			<view class="goods-desc">
-				<view class="goods-title">【激光去痣】超皮秒/祛雀斑皮hiiouo;kj;ool</view>
-				<view class="goods-coupon">
-					<view class="coupon">
-						<view class="left">预约金</view>
-						<view class="right">满100减10</view>
-					</view>
+<block wx:if="{{currentIndex==1||currentIndex==0}}">
+	<!-- 商品列表 -->
+	<view class="goods-list">
+		<block wx:for="{{3}}" wx:key="index">
+			<view class="goods-item">
+				<view class="goods-img">
+					<image></image>
 				</view>
-				<view class="goods-price"><text class="rmb">￥</text>1800 <text>￥2400</text></view>
+				<view class="goods-desc">
+					<view class="goods-title">【激光去痣】超皮秒/祛雀斑皮hiiouo;kj;ool</view>
+					<view class="goods-coupon">
+						<view class="coupon">
+							<view class="left">预约金</view>
+							<view class="right">满100减10</view>
+						</view>
+					</view>
+					<view class="goods-price"><text class="rmb">￥</text>1800 <text>￥2400</text></view>
+				</view>
+			</view>
+		</block>
+	</view>
+</block>
+<block wx:if="{{currentIndex==0}}">
+	<!-- 专家条目 -->
+	<item-title titleLeft="{{titleExpert}}">
+	</item-title>
+	<view class="expert-outer">
+		<block wx:for="{{4}}" wx:key="index">
+			<view class="expert-i">
+				<view class="info-outer">
+					<view class="tx">
+						<image src=""></image>
+					</view>
+					<view class="expert-n">杨丽花</view>
+					<view class="expert-d">副主任医师 | 从业10年</view>
+					<view class="expert-num">就诊量：864</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</block>
+<!-- 问答 -->
+<item-title titleLeft="{{titleQuestion}}" wx:if="{{currentIndex==0}}">
+</item-title>
+<block wx:if="{{currentIndex==3||currentIndex==0}}">
+	<!-- 问答条目 -->
+	<view class="anser-fa">
+		<view class="anser-outer">
+			<view class="title">想要点痣最好的方法是什么固定营销位?</view>
+			<view class="doctor">
+				<view class="user-img">
+					<image src=""></image>
+				</view>
+				<view class="doctor-name">主任杨廉华</view>
+				<view class="point"></view>
+				<view class="hd">回答了问题</view>
+			</view>
+			<view class="answer">
+				固定营销位可行的这个方法是可行的这个方法是可是可行的这个方法是可行的，这个方法是可行的是可是可行的这个方法这个方法是可行的，这个方法是可行固定营销位可行的这个方法是可行的这个方法是可是可行的这个方法是可行的，这个方法是可行的
+			</view>
+			<view class="bottom-num">
+				<view class="look">
+					<text class="iconfont icon-liulan"></text>
+					5072浏览
+				</view>
+				<view class="zan">
+					<text class="iconfont icon-dianzan"></text>
+					3400赞同</view>
+				<view class="share">
+					<text class="iconfont icon-fenxiang"></text>
+					分享</view>
 			</view>
 		</view>
-	</block>
-</view>
-<!-- 专家列表 -->
-<view class="expert-list">
-	<view class="expert-item">
-		<view class="expert-img">
-			<image src=""></image>
-		</view>
-		<view class="expert-info">
-			<view class="expert-name">杨丽花</view>
-			<view class="expert-desc">
-				<text class="h">好评率:</text><text class="l">100%</text> | 从业10年 | 就诊量: 864
+	</view>
+</block>
+<item-title titleLeft="{{titleRecommend}}" wx:if="{{currentIndex==0}}">
+</item-title>
+<block wx:if="{{currentIndex==4||currentIndex==0}}">
+	<!-- 案例item -->
+	<view class="case-item">
+		<view class="user">
+			<view class='user-img'>
+				<image src=""></image>
 			</view>
-			<view class="expert-position">杭州艺星皮肤科主任医师</view>
+			<view class="user-name">shuyuer</view>
+		</view>
+		<!-- 案例图片 -->
+		<view class="case-img">
+			<view class="img-after">
+				<image src=""></image>
+				<view class="after">after</view>
+			</view>
+			<view class="img-before">
+				<image src=""></image>
+				<view class="before">before</view>
+			</view>
+		</view>
+		<!-- 案例描述 -->
+		<view class="case-desc">
+			世界上最远的距离不是生与死的距离不是天各一方,而是我就在你面前你却不知道我爱你
+		</view>
+		<!-- 项目名字 -->
+		<view class="case-item-name">#眼综合</view>
+	</view>
+</block>
+<block wx:if="{{currentIndex==2}}">
+	<!-- 专家列表 -->
+	<view class="expert-list">
+		<view class="expert-item">
+			<view class="expert-img">
+				<image src=""></image>
+			</view>
+			<view class="expert-info">
+				<view class="expert-name">杨丽花</view>
+				<view class="expert-desc">
+					<text class="h">好评率:</text><text class="l">100%</text> | 从业10年 | 就诊量: 864
+				</view>
+				<view class="expert-position">杭州艺星皮肤科主任医师</view>
+			</view>
 		</view>
 	</view>
-</view>
-<!-- 搜素item -->
-<search-item title="{{str}}" keyWords="{{value}}">
-</search-item>
-<!-- 案例item -->
-<view class="case-item">
-	<view class="user">
-		<view class='user-img'>
-			<image src=""></image>
-		</view>
-		<view class="user-name">shuyuer</view>
-	</view>
-	<!-- 案例图片 -->
-	<view class="case-img">
-		<view class="img-after">
-			<image src=""></image>
-			<view class="after">after</view>
-		</view>
-		<view class="img-before">
-			<image src=""></image>
-			<view class="before">before</view>
-		</view>
-	</view>
-	<!-- 案例描述 -->
-	<view class="case-desc">
-		世界上最远的距离不是生与死的距离不是天各一方,而是我就在你面前你却不知道我爱你
-	</view>
-	<!-- 项目名字 -->
-	<view class="case-item-name">#眼综合</view>
-</view>
-<!-- 问答条目 -->
-<view class="anser-outer">
-	<view class="title">想要点痣最好的方法是什么固定营销位?</view>
-	<view class="doctor">
-		<view class="user-img">
-			<image src=""></image>
-		</view>
-		<view class="doctor-name">主任杨廉华</view>
-		<view class="point"></view>
-		<view class="hd">回答了问题</view>
-	</view>
-	<view class="answer">
-		固定营销位可行的这个方法是可行的这个方法是可是可行的这个方法是可行的，这个方法是可行的是可是可行的这个方法这个方法是可行的，这个方法是可行固定营销位可行的这个方法是可行的这个方法是可是可行的这个方法是可行的，这个方法是可行的
-	</view>
-	<view class="bottom-num">
-		<view class="look">
-			<text class="iconfont icon-liulan"></text>
-			5072浏览
-		</view>
-		<view class="zan">
-			<text class="iconfont icon-dianzan"></text>
-			3400赞同</view>
-		<view class="share">
-			<text class="iconfont icon-fenxiang"></text>
-			分享</view>
-	</view>
-</view>
+</block>

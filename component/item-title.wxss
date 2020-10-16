@@ -41,6 +41,7 @@
   box-sizing: border-box;
   font-size: 32rpx;
   color: #333;
+  background-color: #fff;
 }
 
 .title-left {

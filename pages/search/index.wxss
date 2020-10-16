@@ -7,7 +7,6 @@
   align-items: center;
   margin: 0 auto;
   margin-top: 20rpx;
-  margin-bottom: 60rpx;
 }
 .search {
   width: 610rpx;
@@ -71,6 +70,7 @@
   box-sizing: border-box;
   font-weight: 700;
   margin-bottom: 30rpx;
+  margin-top: 60rpx;
 }
 
 .search-l {
@@ -196,9 +196,18 @@
 }
 .band-num{
   padding-top: 40rpx;
-  color: #eb4f53;
+  color: #b7bfc6;
   font-size: 36rpx;
 
+}
+.hot-outer .hot-good-item:nth-child(1) .band-num{
+  color: #eb4f53;
+}
+.hot-outer .hot-good-item:nth-child(2) .band-num{
+  color: #f19129;
+}
+.hot-outer .hot-good-item:nth-child(3) .band-num{
+  color: #f3c948;
 }
 .icon-guan{
   height: 14rpx;
@@ -246,5 +255,9 @@ padding-top: 22rpx;
   font-size: 26rpx;
   color: #999;
 }
-
+/* 搜索呈现页 */
+.search-page{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
 

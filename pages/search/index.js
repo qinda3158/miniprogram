@@ -6,7 +6,13 @@ Page({
    */
   data: {
     search_history:['jj','kk','ll','shuoyi','jj','shijie','wokanzhs','hshs'],
-    hot_list:['jj','kk','ll','shuoyi','jj','shijie','wokanzhs','hshs']
+    hot_list:['jj','kk','ll','shuoyi','jj','shijie','wokanzhs','hshs'],
+    searchValue:'我',
+    str: '',
+    searchItemList:[
+      {id:1,type:2,title:'我是中国人'},
+      {id:2,type:3,title:'我爱我的祖国'}
+    ]
   },
 
   /**
@@ -29,7 +35,18 @@ Page({
   onShow: function () {
 
   },
-
+  searchInput(e){
+    console.log('jj',e.detail.value)
+    this.setData({
+      searchValue:e.detail.value
+    })
+   },
+   cancelInput(){
+    this.setData({
+     searchValue:'',
+     searchItemList:[]
+    })
+   },
   /**
    * 生命周期函数--监听页面隐藏
    */

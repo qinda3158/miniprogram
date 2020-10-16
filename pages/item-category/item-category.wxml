@@ -1,0 +1,26 @@
+<!--pages/item-category/item-category.wxml-->
+<view class="aside">
+	<view class="nav-item {{currentIndex==index? 'active':''}}" wx:for="{{list}}" wx:key="index"><text>{{item.title}}</text>
+		<view class="line"></view>
+	</view>
+</view>
+<view class="content">
+	<view class="banner">
+		<image class="img" src=""></image>
+	</view>
+	<block wx:for="{{list}}" wx:key="index">
+		<view class="items-outer">
+			<view class="title">{{item.title}}</view>
+			<view class="items">
+				<block wx:for="{{item.lower}}" wx:key="idx" wx:for-index="idx" wx:for-item="it">
+					<view class="item">
+						<view class="item-img">
+							<image src=""></image>
+						</view>
+						<view class="item-name">{{it.name}}</view>
+					</view>
+				</block>
+			</view>
+		</view>
+	</block>
+</view>

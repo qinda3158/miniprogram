@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/search/index",
+    "pages/item-category/item-category",
     "pages/search/result",
+    "pages/search/index",
     "pages/market/market",
     "pages/expert/index",
     "pages/expert/detail",

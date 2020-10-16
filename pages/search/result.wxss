@@ -1,5 +1,8 @@
 /* pages/search/result.wxss */
-.search-outer{
+page{
+  background-color: #fbfcfb;
+}
+.search-outer {
   width: 690rpx;
   height: 68rpx;
   display: flex;
@@ -8,6 +11,7 @@
   margin: 0 auto;
   margin-top: 20rpx;
 }
+
 .search {
   width: 610rpx;
   height: 68rpx;
@@ -23,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .search input {
@@ -39,18 +43,20 @@
   left: 32rpx;
   transform: translateY(-50%);
 }
-.cancel-input{
+
+.cancel-input {
   width: 34rpx;
   height: 34rpx;
   background-color: #c3c4c7;
   color: #fff;
-  font-size: 34rpx;
+  font-size: 30rpx;
   line-height: 30rpx;
   text-align: center;
   border-radius: 50%;
   flex-shrink: 0;
 }
-.cancel-btn{
+
+.cancel-btn {
   width: 60rpx;
   height: 100%;
   font-size: 28rpx;
@@ -59,27 +65,34 @@
   text-align: right;
   line-height: 68rpx;
 }
+
 /* tab栏 */
-.tab-list{
+.tab-list {
   height: 126rpx;
   line-height: 126rpx;
   display: flex;
   justify-content: flex-start;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f4f5f9;
 }
-.tab-item{
+
+.tab-item {
   height: 126rpx;
   padding: 0 34rpx;
   font-size: 28rpx;
   color: #999;
 }
-.tab-list .tab-item:nth-child(1){
+
+.tab-list .tab-item:nth-child(1) {
   padding-left: 30rpx;
 }
-.tab-item.active{
+
+.tab-item.active {
   color: #222;
   font-weight: 700;
   font-size: 36rpx;
 }
+
 /* 商品列表 */
 
 /* 商品区域 */
@@ -183,6 +196,80 @@
   line-height: 24rpx;
 }
 
+/* 专家-综合 */
+.expert-outer {
+  width: 100%;
+  height: 310rpx;
+  padding-bottom: 46rpx;
+  display: flex;
+  justify-content: flex-start;
+  overflow: scroll;
+  background-color: #fff;
+}
+
+.expert-i {
+  width: 320rpx;
+  height: 310rpx;
+  /* background-color: pink; */
+  overflow: hidden;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: 14rpx;
+}
+
+.info-outer {
+  padding-top: 88rpx;
+  height: 250rpx;
+  box-sizing: border-box;
+  background-origin: content-box;
+  background-color: #f9faff;
+  position: relative;
+  margin-top: 62rpx;
+  text-align: center;
+  color: #777;
+}
+.expert-n{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 28rpx;
+  color: #222;
+  font-weight: 700;
+}
+.tx {
+  width: 124rpx;
+  height: 124rpx;
+  border-radius: 50%;
+  background-color: cyan;
+  position: absolute;
+  top: -62rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tx image{
+  width: 100%;
+  height: 100%;
+}
+.expert-d{
+  margin-top: 24rpx;
+  margin-bottom: 20rpx;
+}
+.expert-d,.expert-num{
+  height: 22rpx;
+  font-size: 22rpx;
+  line-height: 22rpx;
+}
+.expert-outer .expert-i:first-child {
+  padding-left: 30rpx;
+}
+
+.expert-outer .expert-i:last-child {
+  padding-right: 30rpx;
+}
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+  color: transparent;
+}
 /* 专家 */
 .expert-item {
   width: 100%;
@@ -252,9 +339,12 @@
 /* 案例条目 */
 .case-item {
   width: 692rpx;
-  height: 592rpx;
+  height: 662rpx;
+  padding-top: 40rpx;
+  padding-bottom: 30rpx;
   box-sizing: border-box;
-  background-color: pink;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f4f5f9;
   margin: 0 auto;
 }
 
@@ -367,14 +457,19 @@
   content: "\e775";
 }
 
-
 .anser-outer {
   width: 690rpx;
   height: 370rpx;
-  background-color: pink;
+  padding-top: 22rpx;
+  padding-bottom: 50rpx;
   margin: 0 auto;
+  border-bottom: 1rpx solid #f4f5f9;
+  background-color: #fff;
 }
+.anser-fa .anser-outer:last-child{
+  border-bottom: 1rpx solid transparent;
 
+}
 .anser-outer .title {
   height: 32rpx;
   font-size: 32rpx;
@@ -452,4 +547,3 @@
   font-size: 36rpx;
   vertical-align: middle;
 }
-
