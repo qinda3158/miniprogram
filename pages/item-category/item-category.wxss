@@ -107,3 +107,8 @@ page {
   white-space: nowrap;
   margin-top: 16rpx;
 }
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  color:transparent;
+}
